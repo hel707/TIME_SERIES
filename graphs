@@ -1,0 +1,32 @@
+#DATASET DESCRIPTION
+import matplotlib.pyplot as plt
+
+plt.plot(timesteps, prices)
+plt.xlabel('Time')
+plt.ylabel('Bitcoin Price')
+plt.title('Bitcoin Price Over Time')
+plt.show()
+plt.hist(prices, bins=30)
+plt.xlabel('Bitcoin Price')
+plt.ylabel('Frequency')
+plt.title('Histogram of Bitcoin Prices')
+plt.show()
+plt.scatter(timesteps, prices)
+plt.xlabel('Time')
+plt.ylabel('Bitcoin Price')
+plt.title('Scatter Plot of Bitcoin Prices')
+plt.show()
+
+
+
+#PREDICTED OUTPUT
+
+def plot_results(predicted_data, true_data):
+    fig = plt.figure(facecolor='white')
+    ax = fig.add_subplot(111)
+    ax.plot(true_data, label='True Data')
+    plt.plot(predicted_data, label='Prediction')
+    plt.legend()
+    plt.show()
+
+plot_results(predictions, testY)
